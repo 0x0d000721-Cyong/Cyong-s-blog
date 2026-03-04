@@ -1,0 +1,7 @@
+baseURL = 'http://localhost:1313/'
+title = 'Cyong'
+theme = 'hugo-theme-stack'
+languageCode = 'zh-cn'
+hasCJKLanguage = true
+math = true
+
