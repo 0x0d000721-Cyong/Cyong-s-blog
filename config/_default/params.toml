@@ -38,3 +38,26 @@ favicon = "img/favicon.png"
         enabled = true
         default = "Licensed under CC BY-NC-SA 4.0"
 
+
+[comments]
+    enabled = true
+    provider = "giscus"
+
+[comments.giscus]
+    repo = "0x0d000721-Cyong/Cyong-s-blog"
+
+    repoId ="R_kgDOReaeaw"
+    
+    category = "Announcements"
+
+    categoryId = "DIC_kwDOReaea84C3ujI"
+
+    mapping = "title"
+
+    reactionsEnabled = true
+
+    emitMetadata = false
+
+    theme = "light"
+
+    lang = "zh-CN"
