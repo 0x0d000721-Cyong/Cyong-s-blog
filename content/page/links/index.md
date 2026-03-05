@@ -20,5 +20,5 @@ links:
     image: https://user-images.githubusercontent.com/5889006/190859553-5b229b4f-c476-4cbd-928f-890f5265ca4c.png
 
 ---
-> Nothing here but us chickens 
+> Nobody here but us chickens 
 
