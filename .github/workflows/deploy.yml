@@ -1,0 +1,34 @@
+name: Deploy Hugo Site to FTP
+
+on:
+  push:
+    branches:
+      - main  # 注意：如果你的默认分支叫 master，请把这里的 main 改成 master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 获取最新代码
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 自动拉取主题文件
+          fetch-depth: 0    # 获取全部历史，保证文章更新时间准确
+
+      - name: 安装 Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true    # hugo-theme-stack 主题必须开启 extended 才能处理样式
+
+      - name: 编译构建 Hugo 网站
+        run: hugo --minify
+
+      - name: 通过 FTP 部署到虚拟主机
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./public/
+          server-dir: /wwwroot/  # ⚠️重要：如果你的网站根目录叫 htdocs 或 web，请把它改成 /htdocs/ 或 /web/

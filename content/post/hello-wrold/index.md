@@ -1,11 +1,11 @@
 +++
 date = '2026-03-04T16:12:44+08:00'
-draft = true
-title = 'Hello Wrold'
+draft = false
+title = 'Hello World'
 description = 'A test blog'
-slug = 'hello-wrold'
+slug = 'hello-world'
 image = 'Abstraktes Bild.jpg'
-categories = 'Test Category'
+categories = ['Test Category']
 tags = ['Test Tag']
 math = true
 +++
@@ -116,3 +116,5 @@ $$
 ## Short code test
 
 {{< bilibili "BV1K5BMB8En1" >}}
+
+## Github Action test
