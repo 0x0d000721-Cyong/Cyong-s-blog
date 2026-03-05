@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
-          server-dir: /wwwroot/  # ⚠️重要：如果你的网站根目录叫 htdocs 或 web，请把它改成 /htdocs/ 或 /web/
+          server-dir: ./  # ⚠️重要：如果你的网站根目录叫 htdocs 或 web，请把它改成 /htdocs/ 或 /web/
