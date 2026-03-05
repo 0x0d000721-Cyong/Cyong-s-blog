@@ -14,7 +14,7 @@ favicon = "img/favicon.png"
 [sidebar]
     emoji = '🤨'
     subtitle = '神隐中......'
-    avatar = 'img/avatar.png' 
+    avatar = 'img/avatar.jpg' 
 
 [footer]
     since = 2026
